@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kolor info</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: linear-gradient(to bottom, #000000, #ffffff); /* Градиентный фон */
+            background-size: 100% 200%; /* Увеличиваем фон для анимации */
+            animation: gradientScroll 15s infinite linear; /* Плавная анимация */
+        }
+
+        @keyframes gradientScroll {
+            0% {
+                background-position: 0% 0%; /* Начальная позиция */
+            }
+            50% {
+                background-position: 0% 100%; /* Градиент вниз */
+            }
+            100% {
+                background-position: 0% 0%; /* Возвращаемся наверх */
+            }
+        }
+
+        /* Стиль кнопки для меню */
+        .tab-button {
+            background-color: rgba(0, 0, 0, 0); /* Прозрачная кнопка */
+            color: rgba(100, 10, 0, 1);
+            padding: 15px 32px;
+            font-size: 18px;
+            border: 2px solid; /* Обводка */
+            cursor: pointer;
+            border-radius: 8px;
+            display: block;
+            margin: 20px auto;
+            position: relative;
+        }
+
+        .tab-button:hover {
+            background-color: rgba(0, 0, 0, 0.1); /* Лёгкий фон при наведении */
+        }
+
+        /* Стиль для меню */
+        .menu {
+            display: none;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            width: 0;
+            height: 0;
+            margin: 20px auto;
+            padding: 0;
+            border-radius: 8px;
+            overflow: hidden;
+            opacity: 0;
+            transition: all 0.5s ease-in-out; /* Плавная анимация */
+        }
+
+        .menu.show {
+            display: block;
+            width: 200px;
+            height: 200px;
+            padding: 20px;
+            opacity: 1;
+        }
+
+        .menu p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Кнопка для отображения меню -->
+    <button id="tab-button" class="tab-button">информация</button>
+
+    <!-- Меню -->
+    <div id="menu" class="menu">
+        <p>Слава ИПУЧЕМУ🙏❤️СЛАВА ИПУЧЕМУ🙏❤️АНГЕЛА ХРАНИТЕЛЯ ИПУЧЕГО КАЖДОМУ ИЗ ВАС🙏❤️БОЖЕ ХРАНИ ИПУЧЕГО🙏❤️СПАСИБО ВАМ НАШ ИПУЧИЙ🙏🏼❤️ ХРАНИ ИПУЧЕГО✊💯Слава ИПУЧЕМУ🙏❤️</p>
+        <p>уска натурал</p>
+        <p>векаве адекват</p>
+    </div>
+
+    <script>
+        // Получаем элементы
+        const tabButton = document.getElementById('tab-button');
+        const menu = document.getElementById('menu');
+
+        // Обработчик клика по кнопке "информация"
+        tabButton.addEventListener('click', function() {
+            menu.classList.toggle('show'); // Переключение класса "show"
+        });
+    </script>
+
+</body>
+</html>
